@@ -64,3 +64,5 @@ def analyze_face(message):
     cv2.imwrite("face_analyzed.jpg", image)
     with open("face_analyzed.jpg", "rb") as f:
         bot.send_photo(chat_id=message.chat.id, photo=f)
+      
+bot.polling(none_stop=True, interval=0)
